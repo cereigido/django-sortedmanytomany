@@ -1,0 +1,33 @@
+.sorted-selector {
+   width: 830px;
+}
+
+.sorted-selector .selector-up, .sorted-selector .selector-down {
+    width: 16px;
+    height: 16px;
+    display: block;
+    text-indent: -3000px;
+    overflow: hidden;
+    cursor: default;
+    opacity: 0.3;
+}
+
+.sorted-selector .active.selector-up, .sorted-selector .active.selector-down {
+    opacity: 1;
+}
+
+.sorted-selector .selector-up {
+    background: url(/static/admin/img/selector-icons.svg) 0 0px no-repeat;
+}
+
+.sorted-selector .active.selector-up:focus, .sorted-selector .active.selector-up:hover {
+    background-position: 0 -16px;
+}
+
+.sorted-selector .selector-down {
+    background: url(/static/admin/img/selector-icons.svg) 0 -32px no-repeat;
+}
+
+.sorted-selector .active.selector-down:focus, .active.selector-down:hover {
+    background-position: 0 -48px;
+}
