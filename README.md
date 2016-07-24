@@ -13,7 +13,7 @@ pip install django-sortedmanytomany
 Adding to installed apps
 ------------------------
 
-- To use the many to many sorted field, you have to add it to your INSTALLED_APPS on your project's settings.py so the needes static files can be loaded:
+- To use the many to many sorted field, you have to add it to your INSTALLED_APPS on your project's settings.py so the needed static files can be loaded:
 
 ```python
     INSTALLED_APPS = (
@@ -25,7 +25,7 @@ Adding to installed apps
 Using SortedManyToManyField
 ---------------------------
 
-- To use SortedManyToMany field, just create a field as if you were user the adding the default ManyToMany
+- To use SortedManyToMany field, just create a field as if you were adding the default ManyToMany
 
 ```python
     from django.db import models

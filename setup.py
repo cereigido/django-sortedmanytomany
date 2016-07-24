@@ -5,7 +5,7 @@ from os.path import dirname, abspath, join
 from setuptools import find_packages, setup
 
 URL = 'https://github.com/cereigido/django-sortedmanytomany/'
-VERSION = __import__('').__version__
+VERSION = __import__('sortedmanytomany').__version__
 
 with open(abspath(join(dirname(__file__), 'README.md'))) as fileobj:
     README = fileobj.read().strip()
