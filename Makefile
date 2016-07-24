@@ -1,9 +1,9 @@
+install:
+	@pip install -e .
+
 clean:
 	@find . -name "*.pyc" -print0 | xargs -0 rm -rf
 	@rm -rf dist build
-
-install:
-	@pip install -e .
 
 pypi:
 	@python setup.py sdist upload -r pypi
@@ -17,5 +17,5 @@ pypitest:
 pypitestregister:
 	@python setup.py register -r pypitest
 
-sdist:
+sdist: clean
 	@python setup.py sdist
