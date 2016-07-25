@@ -25,14 +25,14 @@ class SortedFilteredSelectMultiple(FilteredSelectMultiple):
         option_value = force_text(option_value)
         if option_value in selected_choices:
             selected_html = mark_safe(' selected="selected"')
-            order_html = mark_safe(' data-order="%i"' % self.selected_ordered_choices.index(int(option_value)))
+            order_html = mark_safe(' data-order="%i"' % self.selected_ordered_choices.index(option_value))
         else:
             selected_html = ''
             order_html = ''
         return '<option value="%s"%s%s>%s</option>' % (option_value, order_html, selected_html, option_label)
 
     def render_options(self, choices, selected_choices):
-        self.selected_ordered_choices = selected_choices
+        self.selected_ordered_choices = [str(c) for c in selected_choices]
         return super(SortedFilteredSelectMultiple, self).render_options(choices, selected_choices)
 
     class Media:
