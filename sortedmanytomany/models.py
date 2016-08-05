@@ -9,7 +9,6 @@ from sortedmanytomany.forms import SortedModelMultipleChoiceField
 
 def create_sorted_forward_many_to_many_manager(superclass, rel, *args, **kwargs):
     RelatedManager = create_forward_many_to_many_manager(superclass, rel, *args, **kwargs)
-    print 'create_sorted_forward_many_to_many_manager'
 
     class ManyRelatedManager(RelatedManager):
         def __call__(self, **kwargs):
