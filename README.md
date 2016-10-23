@@ -29,7 +29,7 @@ Using SortedManyToManyField
 
 ```python
     from django.db import models
-    from sortedmanytomany.fields import SortedManyToManyField
+    from sortedmanytomany.models import SortedManyToManyField
 
     class Album(models.Model):
         ...

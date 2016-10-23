@@ -58,7 +58,6 @@
             var fromBox = document.getElementById(from);
             var toBox = document.getElementById(to);
             var fromOptions = fromBox.options;
-            console.log(from, to);
             var toOptions = toBox.options;
             for (var i = 0; i < fromOptions.length; i++) {
                 var option = fromOptions[i];
@@ -102,16 +101,14 @@
             var ordered_cache = {}
 
             django.jQuery.each(cache, function(index, item) {
-                if (item.displayed == 1) {
-                    var newOption = new Option(item.text, item.value, false, false);
-                    newOption.setAttribute("title", item.text);
+                var newOption = new Option(item.text, item.value, false, false);
+                newOption.setAttribute("title", item.text);
 
-                    if (item.selected) {
-                        ordered_cache[item.order] = item;
-                    }
-                    else {
-                        from.add(newOption);
-                    }
+                if (item.selected) {
+                    ordered_cache[item.order] = item;
+                }
+                else if (item.displayed == 1) {
+                    from.add(newOption);
                 }
             });
 
